@@ -1,0 +1,12 @@
+namespace ChatApp
+{
+    public class TextMessage : MessageBase
+    {
+        public TextMessage(string conteudo) : base(conteudo) { }
+
+        public override string FormatMessage()
+        {
+            return $"[Texto] {Conteudo} (Enviado em {DataEnvio})";
+        }
+    }
+}

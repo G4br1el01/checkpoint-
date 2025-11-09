@@ -1,0 +1,20 @@
+namespace ChatApp
+{
+    public class PhotoMessage : MessageBase
+    {
+        public string Arquivo { get; private set; }
+        public string Formato { get; private set; }
+
+        public PhotoMessage(string conteudo, string arquivo, string formato)
+            : base(conteudo)
+        {
+            Arquivo = arquivo;
+            Formato = formato;
+        }
+
+        public override string FormatMessage()
+        {
+            return $"[Foto] {Conteudo} - Arquivo: {Arquivo}.{Formato} (Enviado em {DataEnvio})";
+        }
+    }
+}
